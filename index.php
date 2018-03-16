@@ -1,7 +1,3 @@
-<?php
-	//include_once "connect_bdd.php";
-?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<!-- Début du head -->
@@ -9,7 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>	<!-- Définit le type de caractères utilisés -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/> 					<!-- Rend IE compatible -->
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>	<!-- Permet de définir la taille de l'affichage du site au début -->
-		<meta name="description" content="Tableaux Minimons"/>	<!-- Description du site -->
+		<meta name="description" content="Tableaux Minimons"/>					<!-- Description du site -->
 		<meta name="author" content="Michael PARIS"/>							<!-- Nom du développeur -->
 
 		<!-- Je localise l'emplacement de mon fichier Bootstrap nécessaire à l'utilisation des différentes classes -->
@@ -22,8 +18,6 @@
 		
 		<script type="text/javascript" src="jquery/jquery3.3.1.min.js"></script>
 		
-		<!-- Si on a pas internet ce script ne se charge pas et FullPage.js ne fonctionne pas bien -->
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
 		<!-- Résolu -->
 		<script type="text/javascript" src="dist/js/jquery.min.js"></script>
 
@@ -61,7 +55,6 @@ else
 				</main>
 			</div>
 		</div>
-		
 		
 		<!-- Bootstrap core JavaScript -->
 		<!-- Placed at the end of the document so the pages load faster -->
