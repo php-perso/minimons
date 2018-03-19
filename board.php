@@ -1,11 +1,31 @@
 <?php
 class Board
 {
+    private $_nom;
     private $_titres = "";
     private $_rows = array ();
 
-    public function __construct()
+    public function __construct($nom)
     {
+        $this->_nom = $nom;
+    }
+
+    public function getNom()
+    {
+        return $this->_nom;
+    }
+
+    public function showNom()
+    {
+        $nom = "<h3 id='".$this->getNom()."'>";
+        $nom .= $this->getNom();
+        $nom .= "</h3>";
+        return $nom;
+    }
+
+    public function setNom($nom)
+    {
+        $this->_nom = $nom;
     }
 
     public function getTitre()
@@ -27,7 +47,7 @@ class Board
     {
         if (!empty($this->_titres))
         {
-            $headBoard = "";
+            $headBoard = "<tr>";
             $titres = explode(",", $this->_titres);
             foreach ($titres as $titre)
             {
@@ -35,6 +55,7 @@ class Board
                 $headBoard .= $titre;
                 $headBoard .= "</th>";
             }
+            $headBoard .= "</tr>";
             return $headBoard;
         }
         else
@@ -48,9 +69,18 @@ class Board
         return var_dump($this->_rows);
     }
 
-    public function addRow($level, $cout, $description)
+    public function addRow($infos = array())
     {
-        $this->_rows[] = $level . "/" . $cout . "/" . $description;
+        $stringInfos = "";
+        foreach ($infos as $info)
+        {
+            if ($stringInfos != "")
+            {
+                $stringInfos .= "/";
+            }
+            $stringInfos .= $info;
+        }
+        $this->_rows[] = $stringInfos;
     }
 
     public function showCorps()
