@@ -48,51 +48,33 @@ echo $qg->showNom();
 </div>
 
 <!-- Mercenaire -->
-<h3 id="Mercenaire">Mercenaire</h3>
+<?php
+$mercenaire = new Board("Mercenaire");
+// Affiche le Nom du tableau
+echo $mercenaire->showNom();
+?>
 <div class="table-responsive">
 	<table class="table table-striped table-sm">
 		<thead>
-			<tr>
-				<th>Level</th>
-				<th>Coût (Rûnes)</th>
-				<th>Bonus<br>(Tous les bonus sités des niveaux inférieurs sont compris dans les niveaux supérieurs)</th>
-			</tr>
+<?php
+			$mercenaire->addTitre("Level");
+			$mercenaire->addTitre("Coût (Rûnes)");
+			$mercenaire->addTitre("Bonus<br>(Tous les bonus sités des niveaux inférieurs sont compris dans les niveaux supérieurs)");
+			// Affiche le(s) Titre(s) du tableau
+			echo $mercenaire->showTitre();
+?>
 		</thead>
 		
 		<tbody>
-			<tr>
-				<td>0</td>
-				<td>0</td>
-				<td>N/A
-</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>7000
-</td>
-				<td>Level des mercenaires + 5 niveaux, c’est-à-dire que l'on peut prendre des mercenaires avec 5 niveaux de plus que notre niveau actuel
-</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>7000
-</td>
-				<td>Aide de commission + 5%<br>(5% moins cher de Louer un mercenaire)<br>Mercenaires engageables dans la Brume : 1
-</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>14000
-</td>
-				<td>Commission augmentée + 5%<br>(5% plus d'or en expédiant un mercenaire)
-</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>...</td>
-				<td>Mercenaires engageables dans la Brume : 2
-</td>
-			</tr>
+<?php
+			$mercenaire->addRow(array("0", "0", "N/A"));
+			$mercenaire->addRow(array("1", "7000", "Level des mercenaires + 5 niveaux, c’est-à-dire que l'on peut prendre des mercenaires avec 5 niveaux de plus que notre niveau actuel"));
+			$mercenaire->addRow(array("2", "7000", "Aide de commission + 5%<br>(5% moins cher de Louer un mercenaire)<br>Mercenaires engageables dans la Brume : 1"));
+			$mercenaire->addRow(array("3", "14000", "Commission augmentée + 5%<br>(5% plus d'or en expédiant un mercenaire)"));
+			$mercenaire->addRow(array("4", "...", "Mercenaires engageables dans la Brume : 2"));
+			// Affiche le Corps du tableau
+			echo $mercenaire->showCorps();
+?>
 		</tbody>
 	</table>
 </div>

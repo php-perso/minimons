@@ -76,7 +76,7 @@ class Board
         {
             if ($stringInfos != "")
             {
-                $stringInfos .= "/";
+                $stringInfos .= "~";
             }
             $stringInfos .= $info;
         }
@@ -91,7 +91,7 @@ class Board
             foreach ($this->_rows as $row)
             {
                 $bodyBoard .= "<tr>";
-                $infosRow = explode("/", $row);
+                $infosRow = explode("~", $row);
                 foreach ($infosRow as $info)
                 {
                     $bodyBoard .= "<td>";
