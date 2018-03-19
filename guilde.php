@@ -15,6 +15,11 @@ foreach ($tableau_ameliorations_guilde as $amelioration)
 {
 	echo "<input type='button' value='".$amelioration."' id='button_".$amelioration."' onclick='slideTo(\"#".$amelioration."\")' id='button_".$amelioration."' />";
 }
+
+$guilde = new Board();
+$guilde->addTitre("Level");
+$guilde->addTitre("Coût (Rûnes)");
+$guilde->addTitre("Bonus<br>(Tous les bonus sités des niveaux inférieurs sont compris dans les niveaux supérieurs)");
 ?>
 
 <!-- QG -->
@@ -23,38 +28,19 @@ foreach ($tableau_ameliorations_guilde as $amelioration)
 	<table class="table table-striped table-sm">
 		<thead>
 			<tr>
-				<th>Level</th>
-				<th>Coût (Rûnes)</th>
-				<th>Bonus<br>(Tous les bonus sités des niveaux inférieurs sont compris dans les niveaux supérieurs)</th>
+				<?php echo $guilde->showTitre(); ?>
 			</tr>
 		</thead>
 		
 		<tbody>
-			<tr>
-				<td>0</td>
-				<td>0</td>
-				<td>15 personnes max dans la guilde</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>10000</td>
-				<td>16 personnes max dans la guilde.<br>Débloque la possibilité d'obtenir le level 2 des Mercenaires ainsi que de débloquer la Cantine jusqu'au level 2</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>20000</td>
-				<td>17 personnes max dans la guilde.<br>Débloque la possibilité d'obtenir le level 3 des Mercenaires et de la Cantine ainsi que de débloquer le Gladiateur jusqu'au level 3</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>30000</td>
-				<td>18 personnes max dans la guilde.<br>Débloque la possibilité d'obtenir le level 4 des Mercenaires, de la Cantine et du Gladiateur ainsi que de débloquer l'Aventurier jusqu'au level 4</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>...</td>
-				<td>19 personnes max dans la guilde.<br>Débloque la possibilité d'obtenir le level 5 des Mercenaires, de la Cantine, du Gladiateur et de l'Aventurier ainsi que de débloquer l'Explorateur jusqu'au level 5</td>
-			</tr>
+<?php 
+				$guilde->addRow("0", "0", "15 personnes max dans la guilde");
+				$guilde->addRow("1", "10000", "16 personnes max dans la guilde.<br>Débloque la possibilité d'obtenir le level 2 des Mercenaires ainsi que de débloquer la Cantine jusqu'au level 2");
+				$guilde->addRow("2", "20000", "17 personnes max dans la guilde.<br>Débloque la possibilité d'obtenir le level 3 des Mercenaires et de la Cantine ainsi que de débloquer le Gladiateur jusqu'au level 3");
+				$guilde->addRow("3", "30000", "18 personnes max dans la guilde.<br>Débloque la possibilité d'obtenir le level 4 des Mercenaires, de la Cantine et du Gladiateur ainsi que de débloquer l'Aventurier jusqu'au level 4");
+				$guilde->addRow("4", "40000", "19 personnes max dans la guilde.<br>Débloque la possibilité d'obtenir le level 5 des Mercenaires, de la Cantine, du Gladiateur et de l'Aventurier ainsi que de débloquer l'Explorateur jusqu'au level 5");
+				echo $guilde->showCorps();
+?>
 		</tbody>
 	</table>
 </div>
