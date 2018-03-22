@@ -80,15 +80,21 @@ echo $mercenaire->showNom();
 </div>
 
 <!-- Cantine -->
-<h3 id="Cantine">Cantine</h3>
+<?php
+$cantine = new Board("Cantine");
+// Affiche le Nom du tableau
+echo $cantine->showNom();
+?>
 <div class="table-responsive">
 	<table class="table table-striped table-sm">
 		<thead>
-			<tr>
-				<th>Level</th>
-				<th>Coût (Rûnes)</th>
-				<th>Bonus<br>(Tous les bonus sités des niveaux inférieurs sont compris dans les niveaux supérieurs)</th>
-			</tr>
+<?php
+			$cantine->addTitre("Level");
+			$cantine->addTitre("Coût (Rûnes)");
+			$cantine->addTitre("Bonus<br>(Tous les bonus sités des niveaux inférieurs sont compris dans les niveaux supérieurs)");
+			// Affiche le(s) Titre(s) du tableau
+			echo $cantine->showTitre();
+?>
 		</thead>
 		
 		<tbody>
