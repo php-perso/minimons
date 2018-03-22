@@ -1,5 +1,5 @@
 <?php
-class Board
+class BoardGuilde
 {
     private $_nom;
     private $_titres = "";

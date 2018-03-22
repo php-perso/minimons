@@ -17,7 +17,7 @@ foreach ($tableau_ameliorations_guilde as $amelioration)
 }
 
 /* -- QG -- */
-$qg = new Board("QG");
+$qg = new BoardGuilde("QG");
 // Affiche le Nom du tableau
 echo $qg->showNom(); 
 ?>
@@ -50,7 +50,7 @@ echo $qg->showNom();
 
 <!-- Mercenaire -->
 <?php
-$mercenaire = new Board("Mercenaire");
+$mercenaire = new BoardGuilde("Mercenaire");
 // Affiche le Nom du tableau
 echo $mercenaire->showNom();
 ?>
@@ -83,7 +83,7 @@ echo $mercenaire->showNom();
 
 <!-- Cantine -->
 <?php
-$cantine = new Board("Cantine");
+$cantine = new BoardGuilde("Cantine");
 // Affiche le Nom du tableau
 echo $cantine->showNom();
 ?>
@@ -116,7 +116,7 @@ echo $cantine->showNom();
 
 <!-- Gladiateur -->
 <?php
-$gladiateur = new Board("Gladiateur");
+$gladiateur = new BoardGuilde("Gladiateur");
 // Affiche le Nom du tableau
 echo $gladiateur->showNom();
 ?>
@@ -150,7 +150,7 @@ echo $gladiateur->showNom();
 
 <!-- Aventurier -->
 <?php
-$aventurier = new Board("Aventurier");
+$aventurier = new BoardGuilde("Aventurier");
 // Affiche le Nom du tableau
 echo $aventurier->showNom();
 ?>
@@ -183,7 +183,7 @@ echo $aventurier->showNom();
 
 <!-- Explorateur -->
 <?php
-$explorateur = new Board("Explorateur");
+$explorateur = new BoardGuilde("Explorateur");
 // Affiche le Nom du tableau
 echo $explorateur->showNom();
 ?>
@@ -216,7 +216,7 @@ echo $explorateur->showNom();
 
 <!-- Provisions -->
 <?php
-$provisions = new Board("Provisions");
+$provisions = new BoardGuilde("Provisions");
 // Affiche le Nom du tableau
 echo $provisions->showNom();
 ?>
