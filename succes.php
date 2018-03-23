@@ -1,19 +1,16 @@
 <script type="text/javascript">
-	/*function slideTo (amelioration)
+	function slideTo (amelioration)
 	{
 		$(document).ready( 	function ()
 							{
 								$('html,body').animate({scrollTop: $(amelioration).offset().top}, 'slow');
 							})
-	}*/
+	}
 </script>
-
-
 
 <h2>Succès</h2>
 
 <!-- Hauts-faits -->
-<!-- Provisions -->
 <?php
 $hf = new BoardSucces("Hauts-faits");
 // Affiche le Nom du tableau
@@ -33,11 +30,11 @@ echo $hf->showNom();
 		<tbody>
 <?php
 			$hf->addRow(array("Avoir 30 Minimons<br>Avoir 35 Minimons", "?<br>20 Cornes"));
-			$hf->addRow(array("Finir : Roi de la Colline", "<div class='btn-group'><span data-toggle='dropdown' id='diamant1'>50 Diamants</span><ul class='dropdown-menu' style='min-width : 400px'><div class='col-lg-4'><img src='diamant.png' /></div><div class='col-lg-8'>Une monnaire légendaire qui vous laisse acheter presque tout</div></ul></div>"));
+			$hf->addRow(array("Finir : Roi de la Colline", "<div class='btn-group'><span data-toggle='dropdown' id='diamant1'>50 Diamants</span><ul class='dropdown-menu' style='min-width : 250px'><div style='position : inline'><div class='col-lg-3'><img src='diamant.png' /></div><div class='col-lg-9'>Une monnaire légendaire qui vous laisse acheter presque tout</div></ul></div>"));
 			$hf->addRow(array("Finir : Roi de la Colline - Elite", "<div class='btn-group'><span data-toggle='dropdown' id='diamant'>50 Diamants</span><ul class='dropdown-menu'><img src='diamant.png' /></ul></div>"));
 			$hf->addRow(array("Récupérer 250 étoiles<br>Récupérer 300 étoiles", "?<br>20 Cornes"));
 			$hf->addRow(array("Gagner 50000 points d'Outreterre en un défi<br>Gagner 100000 points d'Outreterre en un défi<br>Gagner 150000 points d'Outreterre en un défi", "300 Pièces d'Outreterre<br>500 Pièces d'Outreterre<br>800 Pièces d'Outreterre"));
-			$hf->addRow(array("Gagnez une commission de <a data-toggle='tooltip' href='#' title='Synonyme de \"carnassier\"'>carnivores </a>20000000 Jade<br>Gagnez une commission de 50000000 Jade", "25 Pièces de Jade<br>30 Pièces de Jade"));
+			$hf->addRow(array("Gagnez une commission de 20000000 Jade<br>Gagnez une commission de 50000000 Jade", "25 Pièces de Jade<br>30 Pièces de Jade"));
 			$hf->addRow(array("Utiliser l'Alchimir 50 fois<br>Utiliser l'Alchimir 100 fois<br>Utiliser l'Alchimir 200 fois", "?<br>30 Pièces de Jade<br>35 Pièces de Jade"));
 			$hf->addRow(array("Compléter 1000 quêtes d'Expédition<br>Compléter 2000 quêtes d'Expédition<br>Compléter 5000 quêtes d'Expédition", "200 Fruits Mystique<br>250 Fruits Mystique<br>300 Fruits Mystique"));
 			$hf->addRow(array("Utiliser 500 Pierres de Sprint<br>Utiliser 1000 Pierres de Sprint<br>Utiliser 2000 Pierres de Sprint<br>Utiliser 5000 Pierres de Sprint", "?<br>80 Pierres de Sprint<br>100 Pierres de Sprint<br>150 Pierres de Sprint"));
