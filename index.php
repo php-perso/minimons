@@ -1,7 +1,11 @@
 <?php
-// Déclaration des class
-require "board_guilde.php";
-require "board_succes.php";
+// On appelle cette fonction pour Inclure la classe correspondante à la page
+function chargerClasse($classe)
+{
+  	require $classe . '.php';
+}
+ // On enregistre la fonction en autoload pour qu'elle soit appelée dès qu'on instanciera une classe non déclarée.
+spl_autoload_register('chargerClasse');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
