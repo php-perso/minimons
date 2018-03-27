@@ -2,14 +2,15 @@ CREATE TABLE NomGuilde
 (
     	id_Guilde INT PRIMARY KEY NOT NULL,
     	nom_Amelioration VARCHAR(100)
-)
+);
 
-CREATE TABLE AmzliorationGuilde
+CREATE TABLE AmeliorationGuilde
 (
 	id_Amelioration INT PRIMARY KEY NOT NULL,
-	id_Guilde INT FOREIGN KEY REFERENCES NomGuilde(id_Guilde), 
+	id_Guilde INT NOT NULL,
+    FOREIGN KEY (id_Guilde) REFERENCES NomGuilde(id_Guilde), 
 	nom VARCHAR(100) NOT NULL,
 	lvl INT NOT NULL,
 	cout INT,
 	description VARCHAR (500)
-)
+);
